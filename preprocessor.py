@@ -2,13 +2,13 @@ import re
 import pandas as pd
 
 def preprocessor(data):
-    pattern = r"\[\d{1,2}/\d{1,2}/\d{2},\s\d{1,2}:\d{2}:\d{2}\s(?:AM|PM)\]"
+    pattern = r"(?:\[)?\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{2}(?::\d{2})?\s?(?:[AP]M|[ap]m)?(?:\])?\s?-\s?"
 
     messages = re.split(pattern, data)[1:]
     dates = re.findall(pattern, data)
 
     df = pd.DataFrame({'user_message': messages, 'message_date': dates})
-    df['message_date'] = pd.to_datetime(df['message_date'], format='[%m/%d/%y, %I:%M:%S %p]')
+    df['message_date'] = pd.to_datetime(df['message_date'], format='mixed')
 
     df.rename(columns={'message_date': 'date'}, inplace=True)
 
