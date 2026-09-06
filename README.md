@@ -53,3 +53,6 @@ streamlit run app.py
 ## Deployment
 
 This application can be deployed using Streamlit Community Cloud by connecting the GitHub repository and selecting `app.py` as the main application file.
+
+## 🚀 Live Demo
+Check out the live app here: [WhatsApp Chat Analyzer](https://whatsappchatanalyzer--001.streamlit.app/)
