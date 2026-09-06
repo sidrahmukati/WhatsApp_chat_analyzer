@@ -19,8 +19,8 @@ def fetch_stats(selected_user, df):
         words.extend(message.split())
 
     #fetch number of media shared
-    num_media = df[df['message'].str.contains(r'(Media|image|video|album|sticker|GIF|Document) omitted>', case = False, na = False)].shape[0]
-
+    num_media = df[df['message'].astype(str).str.contains(r'(Media|image|video|album|sticker|GIF|Document) omitted>', case=False, na=False)].shape[0]
+    
     #fetch numbers of links
     links = []
     for message in df['message']:
