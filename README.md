@@ -29,7 +29,7 @@ WhatsApp_chat_analyzer/
 
 ## How to Run Locally
 
-Clone the repository:
+1. Clone the repository:
 
 ```bash
 git clone [https://github.com/sidrahmukati/WhatsApp_chat_analyzer.git](https://github.com/sidrahmukati/WhatsApp_chat_analyzer.git)
