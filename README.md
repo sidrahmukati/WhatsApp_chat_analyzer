@@ -26,6 +26,7 @@ WhatsApp_chat_analyzer/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+```
 
 ## How to Run Locally
 
